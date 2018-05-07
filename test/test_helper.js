@@ -7,7 +7,7 @@ before((done) => {
     mongoose.connect('mongodb://localhost:27017/users_test');
     mongoose.connection
     .once('open',() => {
-        done();
+        done()
     })
     .on('error',(error) => {
         console.warn('Error : ',error);
